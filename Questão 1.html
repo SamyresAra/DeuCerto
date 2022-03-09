@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 1</title>
+	<script type="text/javascript">
+
+		//Q1 – Calcule a média de diversas notas digitadas pelo usuário.
+
+	function MediaN(Quest1) {
+	
+	alert(Quest1);
+
+	var quantas, i, notas, acumulador, media;
+	acumulador = 0;
+	i = 1;
+
+	quantas = Number(window.prompt("Quantas notas você quer digitar? "));
+
+	do{
+
+		notas = Number(window.prompt("Digite a " + i + "º nota"));
+
+		acumulador = acumulador + notas;
+
+		i++;
+	}while(i <= quantas);
+	media = acumulador / quantas;
+
+	alert("A média foi de: " + media);
+
+	}
+	MediaN("Cálculo de média");
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>
+
+

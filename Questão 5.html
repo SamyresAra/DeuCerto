@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Questão 05</title>
+	<script type="text/javascript">
+
+		//Q5 – Crie um programa que entre com os dados de altura e sexo de 5 pessoas. Imprima na tela quantas pessoas são do sexo masculino e quantas pessoas são do sexo feminino. Mostre também qual é a maior altura e se essa altura é de um homem ou uma mulher.
+		
+		function sexoAltura(){
+			var i, user1, user2, maior, cont1, cont2, pessoay1, pessoax1, pessoay2, pessoax2, pessoay3, pessoax3, pessoay4, pessoax4, pessoay5, pessoax5;
+			cont1 = 0;
+			cont2 = 0;
+			i = 1;
+
+			do{
+
+				user1 = window.prompt("Digite o sexo da " + i + "º pessoa: f ou m");
+				user2 = Number(window.prompt("Digite a altura da " + i + "º pessoa:" ));
+
+				if ((user1 === "F") || (user2 === "f")){
+					cont1 = cont1 + 1;
+				}else if ((user1 === "M") || (user1 === "m")){
+					cont2 = cont2 + 1;
+				}
+				if (i == 1){
+					pessoax1 = user1;
+					pessoay1 = user2;
+				} else if(i == 2){
+					pessoax2 = user1;
+					pessoay2 = user2;
+				} else if (i == 3) {
+					pessoax3 = user1;
+					pessoay3 = user2;
+				} else if (i == 4) {
+					pessoax4 = user1;
+					pessoay4 = user2;
+				} else if (i == 5) {
+					pessoax5 = user1;
+					pessoay5 = user2;
+				}
+				i++;
+			}while(i<=5);
+
+			maior = Math.max(pessoay1, pessoay2, pessoay3, pessoay4, pessoay5);
+
+			if (cont1 <=2){
+				alert("Você digitou " + cont1 + " pessoas do sexo feminino");
+			}
+			else if(cont1 == 1){
+				alert("Você digitou apenas uma pessoa do sexo feminino ");
+			}
+			else if (cont1 == 0){
+				alert("Você não digitou ninguém do sexo feminino");
+			}
+			if (cont2 >=2){
+				alert("Você digitou " + cont2 + " pessoas do sexo masculino");
+			}
+			else if(cont2 == 1){
+				alert("Você digitou apenas uma pessoa do sexo masculino ");
+			}
+			else if (cont2 == 0){
+				alert("Você não digitou ninguém do sexo masculino");
+		 }
+
+		 if (maior == pessoay1) {
+		 	alert("A maior altura digitada foi da 1º pessoa, sendo valor: " + maior + ". Essa pessoa é do sexo: " + pessoax1);
+		 }
+		 else if(maior == pessoay2) {
+		 	alert("A maior altura digitada foi da 2º pessoa, sendo valor: " + maior + ". Essa pessoa é do sexo: " + pessoax2);
+		 }
+		 else if(maior == pessoay3) {
+		 	alert("A maior altura digitada foi da 3º pessoa, sendo valor: " + maior + ". Essa pessoa é do sexo: " + pessoax3);
+		}
+		else if(maior == pessoay4) {
+		 	alert("A maior altura digitada foi da 4º pessoa, sendo valor: " + maior + ". Essa pessoa é do sexo: " + pessoax4);
+		 }
+		 	else if(maior == pessoay5) {
+		 	alert("A maior altura digitada foi da 5º pessoa, sendo valor: " + maior + ". Essa pessoa é do sexo: " + pessoax5);
+		 }
+		}
+		sexoAltura("Sexo feminino e masculino, e a mais alta");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

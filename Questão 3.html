@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 3</title>
+	<script type="text/javascript">
+		
+		//Q3 – Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é o maior número e exiba-o.
+		   	
+	var usuario, a, b, c, d, e;
+	i = 1;
+
+	do{
+		usuario = Number(window.prompt("Digite o " + i + "º número"));
+		if (i==1){
+			a = usuario;
+		} else if (i == 2){
+			b = usuario;
+		} else if (i == 3) {
+			c = usuario;
+		} else if (i == 4) {
+			d = usuario;
+		} else if (i == 5) {
+			e = usuario;
+		}
+
+		i++;
+	}while(i <= 5);
+
+	alert("O maior número é: " + (Math.max(a, b,c, d, e)));
+	alert("O maior dentre 5 números");
+		 	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

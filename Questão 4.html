@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 04</title>
+	<script type="text/javascript">
+		
+		//Q4 – Peça ao usuário para digitar várias idades. Exiba quantas pessoas são maiores de idade (18 anos) e quantas são menores.
+		function id() {
+
+			var quantas, i, usuario, maior, menor;
+			maior = 0;
+			maior = 0;
+			i = 1;
+
+			quantas = Number(window.prompt("Quantas idades você irá digitar? "));
+			
+			do {
+				usuario = Number(window.prompt("Digite a " + i + "º idade"));
+					
+				if (usuario >= 18) {
+					maior = maior + 1;
+				} else if (usuario < 18){
+					menor = menor + 1;
+				}
+				i++;
+			} while (i <= quantas);
+
+			if (maior >= 2){
+				alert("Você digitou " + maior + " pessoas com idade maior que 18 anos ");
+				}else if (maior == 1) {
+					alert("Apenas uma pessoa é maior de 18 anos");
+				}else if (maior == 0) {
+					alert("Você não digitou nenhuma pessoa com idade maior que 18 anos");
+				}
+				if (menor >= 2){
+					alert("Você digitou " + menor + " pessoas com idade menor que 18 anos" );
+				}else if (menor == 1) {
+					alert("Apenas uma pessoa é menor de 18 anos");
+				} else if (menor == 0) {
+					alert("Você não digitou nenhuma pessoa com idade menor que 18 anos");
+				}
+			}
+			id("Maiores e menores de idade");
+	</script>
+</head>
+<body>
+
+</body>
+</html>
